@@ -1,0 +1,44 @@
+name: traffic-analysis
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.8
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - torchaudio=0.13.1
+  - pytorch-cuda=11.7
+  - cudatoolkit=11.7
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - jupyter
+  - ipykernel
+  - pip
+  
+  - pip:
+    - opencv-python
+    - pillow
+    - seaborn
+    - tqdm
+    - requests
+    - geopandas
+    - shapely
+    - folium
+    - census
+    - pygris
+    - statsmodels
+    - pysal
+    - esda
+    - libpysal
+    - ultralytics
+    - pytest
+    
+    # OpenSeeD dependencies (install after detectron2)
+    # - detectron2  # Install from source
+    # - openseed    # Install from source
