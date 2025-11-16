@@ -37,7 +37,7 @@ ENV/
 .vscode/
 
 # Model weights (too large for git)
-models/
+# Note: This ignores model weight files but NOT src/models/ source code
 *.pt
 *.pth
 *.onnx
@@ -45,6 +45,8 @@ models/
 *.pb
 *.h5
 *.weights
+data/models/
+checkpoints/
 
 # Data directories (too large for git)
 data/raw/
