@@ -26,3 +26,53 @@ This project analyzes traffic camera footage from Caltrans District 8 (Riverside
 - 🗺️ **Spatial Analysis** using geospatial correlation methods
 - 📈 **Statistical Modeling** with regression and time series analysis
 - 📷 **Automated Data Collection** from Caltrans CWWP2 camera feeds
+
+## 🚀 Quick Start
+
+### Installation
+
+**Automated Setup (Recommended):**
+
+```bash
+# For GPU (CUDA-enabled):
+chmod +x setup_openseed_gpu.sh
+./setup_openseed_gpu.sh
+
+# For CPU only:
+chmod +x setup_openseed_cpu.sh
+./setup_openseed_cpu.sh
+```
+
+**Manual Setup:**
+
+See [INSTALLATION.md](INSTALLATION.md) for detailed installation instructions, troubleshooting, and alternative setup methods.
+
+### Verify Installation
+
+```bash
+# Activate virtual environment
+source venv/bin/activate
+
+# Run tests
+python scripts/test_openseed.py
+
+# Try the demo
+python scripts/demo_openseed.py --sample
+```
+
+### Quick Demo
+
+```python
+from src.models import OpenSeedTrafficAnalyzer
+
+# Initialize analyzer
+analyzer = OpenSeedTrafficAnalyzer()
+
+# Detect vehicles in an image
+results = analyzer.detect_vehicles('traffic_image.jpg', return_visualizations=True)
+
+print(f"Total vehicles: {results['total_vehicles']}")
+print(f"Counts: {results['counts']}")
+```
+
+For more examples, see [notebooks/01_openseed_vehicle_detection.ipynb](notebooks/01_openseed_vehicle_detection.ipynb)
